@@ -1,0 +1,167 @@
+form{
+    background-color: var(--bg-form-color);
+    border-radius: 1.75rem;
+    overflow: hidden;
+    padding: calc(8.3rem + 2rem) 4rem 4rem;
+    max-width: 46rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem ;
+    margin: 0 auto 32px;
+}
+fieldset{
+    border: none;
+    position: relative;
+}
+fieldset .fieldset-box{
+    position: relative;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+}
+legend{
+    font-family: 'Staatliches', cursive;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--legend-color);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #E6E6F0;
+    text-align: center;
+}
+fieldset .first-legend{
+    height: 8.3rem;
+    background: var(--primary-color);
+    color: var(--bg-form-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -64px;
+    top: calc(-8.3rem + -2rem);
+    width: calc(100% + 64px + 64px);
+    position: absolute;
+}
+
+.field-input{
+    display: flex;
+    flex-direction: column;
+}
+.field-input label{
+    color: var(--label-color);
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+}
+.field-input input, 
+.field-input select, 
+.field-input textarea{
+    border-radius: 8px;
+    border: 1px solid #E6E6F0;
+    background: var(--bg-input-color);
+    padding: 1rem;
+    color: var(--before-bg-color);
+}
+.field-input input:focus, 
+.field-input select:focus, 
+.field-input textarea:focus{
+    outline: 1px solid var(--before-bg-color);
+}
+.field-input label span{
+    color: var(--span-color);
+    font-size: 0.75rem;
+    line-height: 1.75rem;
+    margin-left: 0.5rem;
+}
+.double-input-box{
+    display: flex;
+    gap: 22px;
+}
+.double-input-box .field-input{
+    width: 100%;
+}
+
+/*
+INFORMAÇÕES DO MENTOR
+*/
+
+.field-input select{
+    appearance: none;
+    width: 50%;
+}
+.field-input textarea{
+    height: 10.3rem;
+    resize: none;
+}
+.field-checkbox{
+    position: relative;
+}
+.field-checkbox label{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.field-checkbox input[type="checkbox"]{
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.field-checkbox label::before{
+    content: " ";
+    text-align: center;
+
+    height: 1.5rem;
+    width: 1.5rem;
+
+    background-color: #FAFAFC;
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.field-checkbox input:checked + label::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2301_23)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2301_23'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+/*
+AGENDANDO PRÓXIMA MENTORIA
+*/
+
+.field-date{
+    display: flex;
+    margin-top: 32px;
+    gap: 16px;
+    width: 100%;
+}
+.field-date .field-input input{
+    width: 8.75rem;
+}
+.field-date div:nth-child(1) input,
+.field-date div:nth-child(1){
+    width: 100%;
+}
+
+/*
+BUTTON SUBMIT
+*/
+
+form button[type="submit"]{
+    font-family: 'Staatliches', cursive;
+    color: #fff;
+    font-size: 20px;
+    line-height: 26px;
+    
+    padding: 15px 40px;
+    width: 100%;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+
+    margin-top: 32px;
+    cursor: pointer;
+}
+
+/*
+INVALID INPUT
+*/
+input:invalid{
+    border: 1px solid var(--primary-color);
+}
